@@ -1,33 +1,33 @@
 skinstartfullhd = """
-	<screen name="BackupSuite" position="center,225" size="1300,720" title=" " >
-		<eLabel text="Realiza una copia completa de tu imagen  " render="Label" position="30,7" size="1860,75" backgroundColor="00000000" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="left"/>
-				<widget source="global.CurrentTime" render="Label" position="840,50" size="460,70" font="Regular;65" halign="center" foregroundColor="info" backgroundColor="bgmain" transparent="1">
-<convert type="ClockToText">Default</convert>
-</widget>
-                <widget source="session.CurrentService" render="Label" position="850,480" size="440,100" font="Regular;38" halign="center" foregroundColor="info" backgroundColor="bgmain" transparent="1">
-<convert type="ServiceName">Name</convert>
-</widget>
+	<screen name="BackupSuite" position="fill" size="1920,1080" title=" " >
+		<widget source="Title" render="Label" position="30,7" size="1860,75" backgroundColor="00000000" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="left"/>
+		<eLabel position="0,0" size="1920,87" backgroundColor="#00000000" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/fullsmallshadowline.png" position="0,87" size="1920,3" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/fullsmallshadowline.png" position="0,1020" size="1920,3"/>
+		<widget source="global.CurrentTime" render="Label" position="1665,22" size="225,37" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="right">
+			<convert type="ClockToText">Format:%-H:%M</convert>
+		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1440,52" size="450,37" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="right">
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text=" " position="85,30" size="1085,55" backgroundColor="#18101214" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="left" />
-		
-		
-                <ePixmap pixmap="SFTfullhd/menu/bb.png" position="18,638" size="1264,74" zPosition="-1" alphatest="on"/>
-<ePixmap pixmap="SFTfullhd/menu/usbb.png" position="945,160" size="250,250" zPosition="-1" alphatest="on"/>
-<ePixmap pixmap="SFTfullhd/menu/exitred.png" position="1212,650" size="48,48" alphatest="blend"/>
-<ePixmap pixmap="SFTfullhd/buttons/green48x48.png" position="230,650" size="48,48" alphatest="blend"/>
-<ePixmap pixmap="SFTfullhd/buttons/yellow48x48.png" position="530,650" size="48,48" alphatest="blend"/>
-<ePixmap pixmap="SFTfullhd/buttons/blue48x48.png" position="830,650" size="48,48" alphatest="blend"/>
-<ePixmap pixmap="SFTfullhd/menu/arrow1.png" position="40,650" size="48,48" alphatest="blend"/>
-<ePixmap pixmap="SFTfullhd/menu/arrow_h.png" position="120,650" size="48,48" alphatest="blend"/>
+		<widget source="session.VideoPicture" render="Pig" position="30,120" size="720,405" backgroundColor="transparent" zPosition="1"/>
+		<widget source="session.CurrentService" render="Label" position="30,90" size="720,30" zPosition="1" foregroundColor="secondFG" font="Regular;28" borderColor="black" noWrap="1" valign="center" halign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 
-		
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_red.png"	position="187,1030" size="38,38" alphatest="on" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_green.png"	position="622,1030" size="38,38" alphatest="on" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_yellow.png" position="1057,1030" size="38,38" alphatest="on" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_blue.png"	position="1492,1030" size="38,38" alphatest="on" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_info.png" alphatest="on" position="115,1030" size="54,38" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_help.png" alphatest="on" position="40,1030" size="51,38" />
+
 		<widget name="key_red" 		position="239,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00ff0000" font="Regular;34" /> 
-		<widget name="key_green"	position="280,658" size="280,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#0053b611" font="Regular;34" transparent="1"  /> 
-		<widget name="key_yellow" 	position="580,658" size="280,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00F9C731" font="Regular;34" transparent="1" />
-		<widget name="key_blue" 	position="880,651" size="280,36" valign="top" halign="left" zPosition="4"  foregroundColor="#003a71c3" font="Regular;34" transparent="1" />
-		<widget source="help" render="Label" position="730,650" size="590,83" font="Regular;21" />
+		<widget name="key_green"	position="674,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#0053b611" font="Regular;34" /> 
+		<widget name="key_yellow" 	position="1109,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00F9C731" font="Regular;34" />
+		<widget name="key_blue" 	position="1544,1030" size="380,36" valign="top" halign="left" zPosition="4"  foregroundColor="#003a71c3" font="Regular;34" />
+		<widget source="help" render="Label" position="5,345" size="590,83" font="Regular;21" />
 	</screen>"""
 
 skinstarthd = """
@@ -133,14 +133,17 @@ skinflashfullhd = """
 		<widget source="global.CurrentTime" render="Label" position="1440,52" size="450,37" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="right">
 			<convert type="ClockToText">Date</convert>
 		</widget>
+
 		<widget source="session.VideoPicture" render="Pig" position="30,120" size="720,405" backgroundColor="transparent" zPosition="1"/>
 		<widget source="session.CurrentService" render="Label" position="30,90" size="720,30" zPosition="1" foregroundColor="secondFG" font="Regular;28" borderColor="black" noWrap="1" valign="center" halign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
+
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_red.png"	position="187,1030" size="38,38" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_green.png"	position="622,1030" size="38,38" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_yellow.png" position="1057,1030" size="38,38" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_blue.png" position="1492,1030" size="38,38" alphatest="on" />
+
 		<widget source="key_red" 		render="Label" 	position="239,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00ff0000" font="Regular;34" /> 
 		<widget source="key_green" 	render="Label" 	position="674,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#0053b611" font="Regular;34" /> 
 		<widget source="key_yellow"	render="Label" 	position="1109,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00F9C731" font="Regular;34" />
