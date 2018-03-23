@@ -4,7 +4,7 @@
 
 <channel>
 <title><![CDATA[Nombre]]></title>
-<logo_30x30><![CDATA[]]></logo_30x30>
+<logo_20x20><![CDATA[]]></logo_20x20>
 <description><![CDATA[<img src="" />]]></description>
 <stream_url><![CDATA[]]></stream_url>
 <buffer_kb>20480</buffer_kb>
@@ -14,7 +14,7 @@
 
 <channel>      
 <title><![CDATA[Nombre]]></title> 
-<logo_30x30></logo_30x30> 
+<logo_20x20></logo_20x20> 
 <description><![CDATA[<img src=""/>]]></description> 
 <playlist_url><![CDATA[]]></playlist_url>  
 <buffer_kb>20480</buffer_kb>

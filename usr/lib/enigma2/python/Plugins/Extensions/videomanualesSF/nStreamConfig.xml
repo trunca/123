@@ -5,7 +5,7 @@
 STARTPORTAL 
 в это поле вводится линк на стартовый плейлист, который будет грузится во время старта плагина. 
 если поле пустое то загрузится стартовый плейлист  nStreamVOD.xml
-пример: <startportal><![CDATA[http://gegen-abzocke.com/xml/portal2.xml]]></startportal>
+пример: <startportal><![CDATA[https://github.com/sfteam-6/videoManuales/blob/master/videomanuales.xml]]></startportal>
 -->	
 	<startportal><![CDATA[]]></startportal>
 <!-- RTMPGW 
