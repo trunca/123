@@ -59,7 +59,7 @@ LOGFILE = "BackupSuite.log"
 VERSIONFILE = "imageversion"
 ENIGMA2VERSIONFILE = "/tmp/enigma2version"
 
-with open("/var/lib/opkg/info/enigma2-plugin-extensions-backupsuite.control") as origin:
+with open("/etc/enigma2-plugin-extensions-backupsuite.control") as origin:
 	for versie in origin:
 		if not "Version: " in versie:
 			continue

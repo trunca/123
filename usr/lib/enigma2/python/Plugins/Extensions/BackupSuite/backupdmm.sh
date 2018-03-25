@@ -8,7 +8,7 @@
 ## ADD A POSTRM ROUTINE TO ENSURE A CLEAN UNINSTALL
 ## This is normally added while building but despite several requests it isn't added yet
 ## So therefore this workaround.
-POSTRM="/var/lib/opkg/info/enigma2-plugin-extensions-backupsuite.postrm"
+POSTRM="/etc/enigma2-plugin-extensions-backupsuite.postrm"
 if [ ! -f $POSTRM ] ; then
 	echo "#!/bin/sh" > "$POSTRM"
 	echo "rm -rf /usr/lib/enigma2/python/Plugins/Extensions/BackupSuite" >> "$POSTRM"
@@ -162,8 +162,8 @@ TARGET="XX"
 UBINIZE=/usr/sbin/ubinize
 USEDsizebytes=`df -B 1 /usr/ | grep [0-9]% | tr -s " " | cut -d " " -f 3`
 USEDsizekb=`df -k /usr/ | grep [0-9]% | tr -s " " | cut -d " " -f 3` 
-if [ -f "/var/lib/opkg/info/enigma2-plugin-extensions-backupsuite.control" ] ; then
-	VERSION="Version: "`cat /var/lib/opkg/info/enigma2-plugin-extensions-backupsuite.control | grep "Version: " | cut -d "+" -f 2`
+if [ -f "/etc/enigma2-plugin-extensions-backupsuite.control" ] ; then
+	VERSION="Version: "`cat /etc/enigma2-plugin-extensions-backupsuite.control | grep "Version: " | cut -d "+" -f 2`
 else
 	VERSION=`$SHOW "message37"`
 fi
@@ -173,7 +173,7 @@ echo -n "" > $LOGFILE
 log "*** THIS BACKUP IS CREATED WITH THE PLUGIN BACKUPSUITE ***"
 log "***** ********************************************* ******"
 log $LINE
-log "Plugin version     = "`cat /var/lib/opkg/info/enigma2-plugin-extensions-backupsuite.control | grep "Version: " | cut -d "+" -f 2- | cut -d "-" -f1`
+log "Plugin version     = "`cat /etc/enigma2-plugin-extensions-backupsuite.control | grep "Version: " | cut -d "+" -f 2- | cut -d "-" -f1`
 log "Back-up media      = $MEDIA"
 df -h "$MEDIA"  >> $LOGFILE
 log $LINE
