@@ -647,7 +647,7 @@ def prevAR():
 
 
 def menu(menuid, **kwargs):
-    if menuid == 'mainmenu':
+    if menuid == 'sfteam':
         return [('videomanualesSF',
           Start_iptv_palyer,
           'videomanualesSF',
